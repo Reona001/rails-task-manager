@@ -1,0 +1,16 @@
+
+<div class="container">
+  <h1>My tasks</h1>
+  <p>Should display user tasks and completion status</p>
+  <p>When you click each task should get tasks/:id</p>
+  <p>Then from each task tasks/:id/edit</p>
+
+  <ul>
+    <li><% @tasks.each do |task| %>
+      <%= link_to task.title, task_path(task) %>
+    <% end %>
+    </li>
+  </ul>
+
+  <%= link_to "Add a new task", tasks_new_path %>
+</div>
